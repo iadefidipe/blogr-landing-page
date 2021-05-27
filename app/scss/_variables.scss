@@ -1,0 +1,29 @@
+// = colors
+
+$clr-CTA-text: hsl(356, 100%, 66%);
+$clr-CTA-hover-background: hsl(355, 100%, 74%);
+$clr-headings: hsl(208, 49%, 24%);
+$clr-text: hsl(0, 0%, 100%);
+$clr-footer-text: hsl(240, 2%, 79%);
+$clr-footer-bg: hsl(240, 10%, 16%);
+
+// =====gradients
+$gradient-body: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+$gradient-sections: linear-gradient(hsl(13, 100%, 77%), hsl(353, 100%, 54%));
+
+// ========== FONT WEIGHTS
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+// ========== font
+$font-primary: 'Overpass', sans-serif;
+$font-secondary: 'Ubuntu', sans-serif;
+
+// ========== CONVERT PIXELS TO REMS
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}

@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  margin: 0rem;
+  padding: 0rem;
+  margin-left: -40px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  background-color: linear-gradient(#2c2d3f, #3f4164);
+  max-width: 100%;
+  font-family: "Overpass", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.0625rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  font-family: "Overpass", sans-serif;
+}
+
+@media screen and (min-width: 602px) {
+  h1 {
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 2.8125rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.4375rem;
+    line-height: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  color: #1f3f5b;
+}
+
+@media screen and (min-width: 602px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.8125rem;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  color: #1f3f5b;
+}
+
+p, a {
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  color: white;
+  font-weight: 300;
+  font-family: "Overpass", sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  p, a {
+    line-height: 2.1875rem;
+  }
+}
+
+@media (max-width: null) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,130 @@
+@import "variables";
+@import "mixins";
+
+
+// ========== CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+li {
+    list-style: none;
+    margin: rem(0);
+    padding: rem(0);
+    margin-left: -40px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// ========== BASE
+body {
+    text-rendering: optimizeSpeed;
+    background-color: $gradient-body;
+    max-width: 100%;
+    font-family: $font-primary;
+  }
+
+
+// ========== TYPOGRAPHY
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: rem(33);
+    line-height: rem(40);
+    font-weight: $weight-bold;
+    font-family: $font-primary;
+
+    @include media-query(large-mobile) {
+        font-size: rem(35);
+        line-height: rem(40);
+    }
+    @include media-query(tablet) {
+        font-size: rem(45);
+        line-height: rem(40);
+    }
+    @include media-query(desktop) {
+        font-size: rem(55);
+        line-height: rem(40);
+    }
+}
+h2 {
+    font-size: rem(24);
+    line-height: rem(40);
+    font-weight: $weight-medium;
+    font-family: $font-secondary;
+    color: $clr-headings;
+
+    @include media-query(large-mobile) {
+        font-size: rem(30);
+        line-height: rem(40);
+    }
+    @include media-query(desktop) {
+        font-size: rem(35);
+        line-height: rem(40);
+    }
+}
+h3 {
+    font-size: rem(22);
+    line-height: rem(29);
+    font-weight: $weight-medium;
+    font-family: $font-secondary;
+    color: $clr-headings;
+}
+p, a {
+    font-size: rem(16);
+    line-height: rem(25);
+    color: $clr-text;
+    font-weight: $weight-light;
+    font-family: $font-primary;
+
+    @include media-query(desktop) {
+        line-height: rem(35);
+    }
+}
+
+
+//visibility
+.hide-for-mobile{ //hide elements in mobile view
+    @include breakpoint-down(medium){
+        display:none;
+    }
+}
+
+.hide-for-desktop{ //hide elements in desktopview
+    @include breakpoint-up(large){
+        display:none;
+    }
+}

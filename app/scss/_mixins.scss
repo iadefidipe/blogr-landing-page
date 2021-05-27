@@ -1,0 +1,68 @@
+// ========== MEDIA QUERIES (MIXINS)
+@mixin media-query ($size) {
+    @if 
+$size == mega-desktop {
+        @media screen and (min-width: 1800px) {
+            @content;
+        }
+    }
+    @if $size == large-desktop {
+        @media screen and (min-width: 1500px) {
+            @content;
+        }
+    }
+    @if $size == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    } 
+    @else if $size == tablet-mini {
+        @media screen and (min-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == large-mobile {
+        @media screen and (min-width: 602px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile {
+        @media screen and (min-width: 360px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile-mini {
+        @media screen and (min-width: 360px) {
+            @content;
+        }
+    } 
+}
+
+
+
+//640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+//639px, 1023px, 1399px
+$breakpoints-down: ( "small":"39.9375em", "desktop-medium": "63.9375em", "large": "87.4375em");
+
+@mixin breakpoint-up($size) {
+    
+    @media (min-width: map-get($breakpoints-up, $size )) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+
+    @media (max-width: map-get($breakpoints-down, $size )) {
+        @content;
+    } 
+}
+
+
