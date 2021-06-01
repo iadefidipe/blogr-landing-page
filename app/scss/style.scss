@@ -46,15 +46,16 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 // ========== BASE
 body {
     text-rendering: optimizeSpeed;
-    background-color: $gradient-body;
+    // background: $gradient-body;
     max-width: 100%;
     font-family: $font-primary;
-  }
+}
 
 
 // ========== TYPOGRAPHY
@@ -67,34 +68,34 @@ h1 {
     font-weight: $weight-bold;
     font-family: $font-primary;
 
-    @include media-query(large-mobile) {
-        font-size: rem(35);
-        line-height: rem(40);
-    }
-    @include media-query(tablet) {
-        font-size: rem(45);
-        line-height: rem(40);
-    }
-    @include media-query(desktop) {
-        font-size: rem(55);
-        line-height: rem(40);
-    }
+    // @include media-query(large-mobile) {
+    //     font-size: rem(35);
+    //     line-height: rem(40);
+    // }
+    // @include media-query(tablet) {
+    //     font-size: rem(45);
+    //     line-height: rem(40);
+    // }
+    // @include media-query(desktop) {
+    //     font-size: rem(55);
+    //     line-height: rem(40);
+    // }
 }
 h2 {
     font-size: rem(24);
     line-height: rem(40);
     font-weight: $weight-medium;
     font-family: $font-secondary;
-    color: $clr-headings;
+    color: black; //$clr-headings
 
-    @include media-query(large-mobile) {
-        font-size: rem(30);
-        line-height: rem(40);
-    }
-    @include media-query(desktop) {
-        font-size: rem(35);
-        line-height: rem(40);
-    }
+    // @include media-query(large-mobile) {
+    //     font-size: rem(30);
+    //     line-height: rem(40);
+    // }
+    // @include media-query(desktop) {
+    //     font-size: rem(35);
+    //     line-height: rem(40);
+    // }
 }
 h3 {
     font-size: rem(22);
@@ -106,13 +107,13 @@ h3 {
 p, a {
     font-size: rem(16);
     line-height: rem(25);
-    color: $clr-text;
+    color: $clr-text; 
     font-weight: $weight-light;
     font-family: $font-primary;
 
-    @include media-query(desktop) {
-        line-height: rem(35);
-    }
+    // @include media-query(desktop) {
+    //     line-height: rem(35);
+    // }
 }
 
 
@@ -128,3 +129,96 @@ p, a {
         display:none;
     }
 }
+
+
+.header{
+    background: $gradient-sections;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(30) rem(50);
+
+    &__logo{
+        flex: 1;
+
+        img{
+            width: rem(105);
+            height: rem(45);
+        }
+    }
+
+    nav{
+        display: flex;
+        flex: 5;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-down(medium){
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+    }
+
+    &__menu{
+
+        >span{
+            display: block;
+            background: white;
+            height: rem(2);
+            width: rem(30);
+
+            &:not(:last-child){
+                margin-bottom: rem(5);
+            }
+        }
+    }
+
+    &__links{
+        display: flex;
+        gap: rem(10);
+
+        @include breakpoint-down(medium){
+            display:none;
+        }
+        
+        a{
+            display: flex;
+            align-items: center;
+            gap: rem(5);
+        }
+    }
+
+    &__cta{
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+
+        @include breakpoint-down(medium){
+            display:none;
+        }
+        
+
+        a{
+            font-weight: $weight-bold;
+            font-size: rem(14);
+
+            &:last-of-type{
+                background: $clr-text;
+                color: $clr-CTA-text;
+                padding: rem(10) rem(30);
+                border-radius: rem(30);
+
+                &:hover{
+                    background: $clr-CTA-hover-background;
+                    color: $clr-text;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+

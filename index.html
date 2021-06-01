@@ -3,10 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+
+  <!-- ======= Ubuntu & Overpass Fonts From Google Fonts ====== -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ==== font awesome cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <!-- === CSS -->
+  <link rel="stylesheet" href="./app/scss/style.css">
+
+
+
+  <!--  ======== SEO  -->
   <title>Frontend Mentor | [Blogr]</title>
+  <meta name="description" content="This is a landing page coding challenge from frontendmentor.io.">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,29 +31,53 @@
   </style>
 </head>
 <body>
-  Product
+  <div class="page-container">
+    
+    <header class="header ">
+    
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="Blogr logo">
+      </div>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
 
-  Company
+      <nav>
 
-  About
-  Team
-  Blog
-  Careers
+        <div class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-  Connect
+        <div class="header__links ">
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
+          <a href="">Product <span> <img src="./images/icon-arrow-light.svg" alt=""></span></a>
+          <!-- <a href="">Overview</a>
+          <a href="">Pricing</a>
+          <a href="">Marketplace</a>
+          <a href="">Features</a>
+          <a href="">Integrations</a> -->
+          <a href="">Company <span> <img src="./images/icon-arrow-light.svg" alt=""></span></a>
+          <!-- <a href="">About</a>
+          <a href="">Team</a>
+          <a href="">Blog</a> -->
+          <a href="">Careers <span> <img src="./images/icon-arrow-light.svg" alt=""></span></a>
+          <!-- <a href="">Connect</a>
+          <a href="">Contact</a>
+          <a href="">Newsletter</a>
+          <a href="">LinkedIn</a> -->
+
+        </div>
+
+        <div class="header__cta ">
+          <a class="Login" href="#">Login</a>
+          <a class="SignUp" href="#">Sign Up</a>
+        </div>
+
+      </nav>
+
+    </header>
+
+  </div>
 
   A modern publishing platform
   Grow your audience and build your online brand
