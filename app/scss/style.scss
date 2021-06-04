@@ -52,7 +52,7 @@ picture {
 // ========== BASE
 body {
     text-rendering: optimizeSpeed;
-    // background: $gradient-body;
+    background: $gradient-body;
     max-width: 100%;
     font-family: $font-primary;
 }
@@ -63,10 +63,22 @@ a {
     text-decoration: none;
 }
 h1 {
-    font-size: rem(33);
+    font-size: rem(56);
     line-height: rem(40);
     font-weight: $weight-bold;
     font-family: $font-primary;
+    color: $clr-text;
+
+    @include breakpoint-down(medium){
+        font-size: rem(46);
+    }
+
+    @include breakpoint-down(small){
+        font-size: rem(30);
+    }
+
+    
+
 
     // @include media-query(large-mobile) {
     //     font-size: rem(35);
@@ -130,13 +142,85 @@ p, a {
     }
 }
 
+.page-container{
+    background-image: url(../../images/bg-pattern-intro.svg), $gradient-sections;
+    background-size: rem(3000) rem(2000);
+    background-repeat: no-repeat;
+    background-position: rem(-350) rem(-800);
+    min-height: rem(550);
+    max-width: 100%;
+    border-radius: rem(0) rem(0) rem(0) rem(100);
+}
 
+// TODO: header styling
 .header{
-    background: $gradient-sections;
+    // background: $gradient-sections;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: rem(30) rem(50);
+    padding: rem(50) rem(70);
+
+    @include breakpoint-down(medium){
+        padding: rem(50);
+    }
+
+
+
+
+    &.open{
+
+
+        .header__menu{
+
+            >span:first-of-type{
+                transform: rotate(45deg);
+            }
+            >span:nth-of-type(2){
+                opacity: 0;
+            }
+            >span:last-of-type{
+                transform: rotate(-45deg);
+            }
+
+        }
+
+
+        .header__buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            width: rem(400);
+            height: rem(500);
+            background-color: white;
+            top: rem(100);
+            left: 50%;
+            transform: translateX(-50%);
+
+            .header__links{
+                justify-self: flex-start;
+                display: block;
+                background-color: blue;
+
+                a{
+                    color: $clr-headings;
+
+                    svg{
+                        color: red;
+                        fill: red;
+                    }
+                }
+            }
+
+            .header__cta{
+                background-color: rgb(0, 255, 72);
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 
     &__logo{
         flex: 1;
@@ -148,17 +232,24 @@ p, a {
     }
 
     nav{
-        display: flex;
+
         flex: 5;
-        align-items: center;
-        justify-content: space-between;
 
         @include breakpoint-down(medium){
+            display: flex;
             flex: 1;
             justify-content: flex-end;
         }
 
     }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
 
     &__menu{
 
@@ -167,6 +258,7 @@ p, a {
             background: white;
             height: rem(2);
             width: rem(30);
+            transform-origin: 5px 1px;
 
             &:not(:last-child){
                 margin-bottom: rem(5);
@@ -176,7 +268,7 @@ p, a {
 
     &__links{
         display: flex;
-        gap: rem(10);
+        gap: rem(25);
 
         @include breakpoint-down(medium){
             display:none;
@@ -185,7 +277,7 @@ p, a {
         a{
             display: flex;
             align-items: center;
-            gap: rem(5);
+            gap: rem(9);
         }
     }
 
@@ -219,6 +311,47 @@ p, a {
 
     }
 
+
+
+}
+
+.hero{
+    min-height: rem(300);
+    padding:  0 rem(20);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     
+     p{
+         margin-top: rem(20);
+         font-size:  rem(18);
+     }
+
+     &__cta{
+        margin-top: rem(50);
+        display: flex;
+        gap: rem(20);
+
+        a{
+            padding: rem(10) rem(20);
+            border-radius: rem(50);
+            font-weight: $weight-bold;
+
+            &:first-of-type{
+                background: white;
+                color: $clr-CTA-text;
+            }
+
+            &:last-of-type{
+                outline: 1px solid white;
+            }
+
+
+        }
+     }
+     
 }
 
 
