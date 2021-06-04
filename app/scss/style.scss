@@ -74,7 +74,7 @@ h1 {
     }
 
     @include breakpoint-down(small){
-        font-size: rem(30);
+        font-size: rem(28);
     }
 
     
@@ -144,12 +144,21 @@ p, a {
 
 .page-container{
     background-image: url(../../images/bg-pattern-intro.svg), $gradient-sections;
-    background-size: rem(3000) rem(2000);
+    background-size: rem(3000) rem(2500), 100%;
     background-repeat: no-repeat;
-    background-position: rem(-350) rem(-800);
+    background-position: rem(-380) rem(-1050), top;
     min-height: rem(550);
     max-width: 100%;
     border-radius: rem(0) rem(0) rem(0) rem(100);
+
+    @include breakpoint-down(medium){
+        background-size: rem(2000) rem(1500), 100%;
+        background-position: rem(-500) rem(-400), top;
+    }
+    @include breakpoint-down(medium){
+        background-size: rem(1800) rem(1500), 100%;
+        background-position: rem(-500) rem(-400), top;
+    }
 }
 
 // TODO: header styling
@@ -162,6 +171,10 @@ p, a {
 
     @include breakpoint-down(medium){
         padding: rem(50);
+    }
+
+    @include breakpoint-down(mobile){
+        padding: rem(50) rem(20);
     }
 
 
@@ -278,6 +291,7 @@ p, a {
             display: flex;
             align-items: center;
             gap: rem(9);
+            font-weight: $weight-semi-bold;
         }
     }
 
@@ -325,8 +339,11 @@ p, a {
      text-align: center;
      
      p{
-         margin-top: rem(20);
-         font-size:  rem(18);
+        margin-top: rem(20);
+        font-size:  rem(18);
+        @include breakpoint-down(small){
+            font-size: rem(16);
+        }
      }
 
      &__cta{
@@ -338,14 +355,26 @@ p, a {
             padding: rem(10) rem(20);
             border-radius: rem(50);
             font-weight: $weight-bold;
+            @include breakpoint-down(mobile){
+                padding: rem(10) ;
+            }
 
             &:first-of-type{
                 background: white;
                 color: $clr-CTA-text;
+                &:hover{
+                    background: $clr-CTA-hover-background;
+                    color: $clr-text;
+                }
             }
 
             &:last-of-type{
                 outline: 1px solid white;
+                &:hover{
+                    background: white;
+                    color: $clr-CTA-text;
+                    outline: none;
+                }
             }
 
 
