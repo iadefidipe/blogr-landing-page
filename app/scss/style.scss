@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins";
 
-
 // ========== CSS RESET
 *,
 *::before,
@@ -28,10 +27,10 @@ ol[role="list"] {
 }
 
 li {
-    list-style: none;
-    margin: rem(0);
-    padding: rem(0);
-    margin-left: -40px;
+  list-style: none;
+  margin: rem(0);
+  padding: rem(0);
+  margin-left: -40px;
 }
 
 html:focus-within {
@@ -51,336 +50,408 @@ picture {
 
 // ========== BASE
 body {
-    text-rendering: optimizeSpeed;
-    background: $gradient-body;
-    max-width: 100%;
-    font-family: $font-primary;
+  text-rendering: optimizeSpeed;
+  background: white;
+  max-width: 100%;
+  font-family: $font-primary;
 }
-
 
 // ========== TYPOGRAPHY
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 h1 {
-    font-size: rem(56);
-    line-height: rem(40);
-    font-weight: $weight-bold;
-    font-family: $font-primary;
-    color: $clr-text;
+  font-size: rem(56);
+  line-height: rem(40);
+  font-weight: $weight-bold;
+  font-family: $font-primary;
+  color: $clr-text;
 
-    @include breakpoint-down(medium){
-        font-size: rem(46);
-    }
+  @include breakpoint-down(medium) {
+    font-size: rem(46);
+  }
 
-    @include breakpoint-down(small){
-        font-size: rem(28);
-    }
+  @include breakpoint-down(small) {
+    font-size: rem(28);
+  }
 
-    
-
-
-    // @include media-query(large-mobile) {
-    //     font-size: rem(35);
-    //     line-height: rem(40);
-    // }
-    // @include media-query(tablet) {
-    //     font-size: rem(45);
-    //     line-height: rem(40);
-    // }
-    // @include media-query(desktop) {
-    //     font-size: rem(55);
-    //     line-height: rem(40);
-    // }
+  // @include media-query(large-mobile) {
+  //     font-size: rem(35);
+  //     line-height: rem(40);
+  // }
+  // @include media-query(tablet) {
+  //     font-size: rem(45);
+  //     line-height: rem(40);
+  // }
+  // @include media-query(desktop) {
+  //     font-size: rem(55);
+  //     line-height: rem(40);
+  // }
 }
 h2 {
-    font-size: rem(24);
-    line-height: rem(40);
-    font-weight: $weight-medium;
-    font-family: $font-secondary;
-    color: black; //$clr-headings
+  font-size: rem(30);
+  line-height: rem(40);
+  font-weight: $weight-medium;
+  font-family: $font-secondary;
+  color: $clr-headings; 
 
-    // @include media-query(large-mobile) {
-    //     font-size: rem(30);
-    //     line-height: rem(40);
-    // }
-    // @include media-query(desktop) {
-    //     font-size: rem(35);
-    //     line-height: rem(40);
-    // }
+  // @include media-query(large-mobile) {
+  //     font-size: rem(30);
+  //     line-height: rem(40);
+  // }
+  // @include media-query(desktop) {
+  //     font-size: rem(35);
+  //     line-height: rem(40);
+  // }
 }
 h3 {
-    font-size: rem(22);
-    line-height: rem(29);
-    font-weight: $weight-medium;
-    font-family: $font-secondary;
-    color: $clr-headings;
+  font-size: rem(26);
+  line-height: rem(36);
+  font-weight: $weight-medium;
+  font-family: $font-secondary;
+  color: $clr-headings;
 }
-p, a {
-    font-size: rem(16);
-    line-height: rem(25);
-    color: $clr-text; 
-    font-weight: $weight-light;
-    font-family: $font-primary;
+p,
+a {
+  font-size: rem(16);
+  line-height: rem(29);
+  color: $clr-text;
+  font-weight: $weight-light;
+  font-family: $font-primary;
 
-    // @include media-query(desktop) {
-    //     line-height: rem(35);
-    // }
+  // @include media-query(desktop) {
+  //     line-height: rem(35);
+  // }
 }
-
 
 //visibility
-.hide-for-mobile{ //hide elements in mobile view
-    @include breakpoint-down(medium){
-        display:none;
-    }
+.hide-for-mobile {
+  //hide elements in mobile view
+  @include breakpoint-down(medium) {
+    display: none;
+  }
 }
 
-.hide-for-desktop{ //hide elements in desktopview
-    @include breakpoint-up(large){
-        display:none;
-    }
+.hide-for-desktop {
+  //hide elements in desktopview
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }
 
-.page-container{
-    background-image: url(../../images/bg-pattern-intro.svg), $gradient-sections;
-    background-size: rem(3000) rem(2500), 100%;
-    background-repeat: no-repeat;
-    background-position: rem(-380) rem(-1050), top;
-    min-height: rem(550);
-    max-width: 100%;
-    border-radius: rem(0) rem(0) rem(0) rem(100);
+// TODO: Main container styling
+.page-container {
+  background-image: url(../../images/bg-pattern-intro.svg), $gradient-sections;
+  background-size: rem(3000) rem(2500), 100%;
+  background-repeat: no-repeat;
+  background-position: rem(-380) rem(-1050), top;
+  min-height: rem(550);
+  max-width: 100%;
+  border-radius: rem(0) rem(0) rem(0) rem(100);
 
-    @include breakpoint-down(medium){
-        background-size: rem(2000) rem(1500), 100%;
-        background-position: rem(-500) rem(-400), top;
-    }
-    @include breakpoint-down(medium){
-        background-size: rem(1800) rem(1500), 100%;
-        background-position: rem(-500) rem(-400), top;
-    }
+  @include breakpoint-down(medium) {
+    background-size: rem(2000) rem(1500), 100%;
+    background-position: rem(-500) rem(-400), top;
+  }
+  @include breakpoint-down(medium) {
+    background-size: rem(1800) rem(1500), 100%;
+    background-position: rem(-500) rem(-400), top;
+  }
 }
 
 // TODO: header styling
-.header{
-    // background: $gradient-sections;
+.header {
+  // background: $gradient-sections;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(50) rem(70);
+
+  @include breakpoint-down(medium) {
+    padding: rem(50);
+  }
+
+  @include breakpoint-down(mobile) {
+    padding: rem(50) rem(20);
+  }
+
+  // TODO: JS class that controls hamburger
+  &.open {
+
+    //todo: hamburger animation
+    .header__menu {
+      > span:first-of-type {
+        transform: rotate(45deg);
+      }
+      > span:nth-of-type(2) {
+        opacity: 0;
+      }
+      > span:last-of-type {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .header__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: rem(400);
+      height: rem(500);
+      background-color: white;
+      top: rem(100);
+      left: 50%;
+      transform: translateX(-50%);
+
+      .header__links {
+        justify-self: flex-start;
+        display: block;
+        background-color: blue;
+
+        a {
+          color: $clr-headings;
+
+          svg {
+            color: red;
+            fill: red;
+          }
+        }
+      }
+
+      .header__cta {
+        background-color: rgb(0, 255, 72);
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+//   TODO: HEader logo styling
+  &__logo {
+    flex: 1;
+
+    img {
+      width: rem(105);
+      height: rem(45);
+    }
+  }
+
+  // todo: header nnav styling
+  nav {
+    flex: 5;
+
+    @include breakpoint-down(medium) {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &__buttons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: rem(50) rem(70);
+    justify-content: space-between;
+  }
 
-    @include breakpoint-down(medium){
-        padding: rem(50);
+  &__menu {
+    > span {
+      display: block;
+      background: white;
+      height: rem(2);
+      width: rem(30);
+      transform-origin: 5px 1px;
+
+      &:not(:last-child) {
+        margin-bottom: rem(5);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: rem(25);
+
+    @include breakpoint-down(medium) {
+      display: none;
     }
 
-    @include breakpoint-down(mobile){
-        padding: rem(50) rem(20);
+    a {
+      display: flex;
+      align-items: center;
+      gap: rem(9);
+      font-weight: $weight-semi-bold;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+
+    @include breakpoint-down(medium) {
+      display: none;
     }
 
+    a {
+      font-weight: $weight-bold;
+      font-size: rem(14);
 
+      &:last-of-type {
+        background: $clr-text;
+        color: $clr-CTA-text;
+        padding: rem(10) rem(30);
+        border-radius: rem(30);
 
-
-    &.open{
-
-
-        .header__menu{
-
-            >span:first-of-type{
-                transform: rotate(45deg);
-            }
-            >span:nth-of-type(2){
-                opacity: 0;
-            }
-            >span:last-of-type{
-                transform: rotate(-45deg);
-            }
-
+        &:hover {
+          background: $clr-CTA-hover-background;
+          color: $clr-text;
         }
-
-
-        .header__buttons{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: absolute;
-            width: rem(400);
-            height: rem(500);
-            background-color: white;
-            top: rem(100);
-            left: 50%;
-            transform: translateX(-50%);
-
-            .header__links{
-                justify-self: flex-start;
-                display: block;
-                background-color: blue;
-
-                a{
-                    color: $clr-headings;
-
-                    svg{
-                        color: red;
-                        fill: red;
-                    }
-                }
-            }
-
-            .header__cta{
-                background-color: rgb(0, 255, 72);
-                display: flex;
-                flex-direction: column;
-            }
-        }
+      }
     }
-
-    &__logo{
-        flex: 1;
-
-        img{
-            width: rem(105);
-            height: rem(45);
-        }
-    }
-
-    nav{
-
-        flex: 5;
-
-        @include breakpoint-down(medium){
-            display: flex;
-            flex: 1;
-            justify-content: flex-end;
-        }
-
-    }
-
-    &__buttons{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-
-    &__menu{
-
-        >span{
-            display: block;
-            background: white;
-            height: rem(2);
-            width: rem(30);
-            transform-origin: 5px 1px;
-
-            &:not(:last-child){
-                margin-bottom: rem(5);
-            }
-        }
-    }
-
-    &__links{
-        display: flex;
-        gap: rem(25);
-
-        @include breakpoint-down(medium){
-            display:none;
-        }
-        
-        a{
-            display: flex;
-            align-items: center;
-            gap: rem(9);
-            font-weight: $weight-semi-bold;
-        }
-    }
-
-    &__cta{
-        display: flex;
-        align-items: center;
-        gap: rem(20);
-
-        @include breakpoint-down(medium){
-            display:none;
-        }
-        
-
-        a{
-            font-weight: $weight-bold;
-            font-size: rem(14);
-
-            &:last-of-type{
-                background: $clr-text;
-                color: $clr-CTA-text;
-                padding: rem(10) rem(30);
-                border-radius: rem(30);
-
-                &:hover{
-                    background: $clr-CTA-hover-background;
-                    color: $clr-text;
-                }
-            }
-
-        }
-
-    }
-
-
-
+  }
 }
 
-.hero{
-    min-height: rem(300);
-    padding:  0 rem(20);
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-     
-     p{
-        margin-top: rem(20);
-        font-size:  rem(18);
-        @include breakpoint-down(small){
-            font-size: rem(16);
+// ======== hero styling 
+.hero {
+  min-height: rem(300);
+  padding: 0 rem(20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    margin-top: rem(20);
+    font-size: rem(18);
+    @include breakpoint-down(small) {
+      font-size: rem(16);
+    }
+  }
+
+  &__cta {
+    margin-top: rem(50);
+    display: flex;
+    gap: rem(20);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+    a {
+      padding: rem(10) rem(20);
+      border-radius: rem(50);
+      font-weight: $weight-bold;
+      @include breakpoint-down(mobile) {
+        padding: rem(10);
+      }
+
+      &:first-of-type {
+        background: white;
+        color: $clr-CTA-text;
+        &:hover {
+          background: $clr-CTA-hover-background;
+          color: $clr-text;
         }
-     }
+      }
 
-     &__cta{
-        margin-top: rem(50);
-        display: flex;
-        gap: rem(20);
-
-        a{
-            padding: rem(10) rem(20);
-            border-radius: rem(50);
-            font-weight: $weight-bold;
-            @include breakpoint-down(mobile){
-                padding: rem(10) ;
-            }
-
-            &:first-of-type{
-                background: white;
-                color: $clr-CTA-text;
-                &:hover{
-                    background: $clr-CTA-hover-background;
-                    color: $clr-text;
-                }
-            }
-
-            &:last-of-type{
-                outline: 1px solid white;
-                &:hover{
-                    background: white;
-                    color: $clr-CTA-text;
-                    outline: none;
-                }
-            }
-
-
+      &:last-of-type {
+        outline: 1px solid white;
+        &:hover {
+          background: white;
+          color: $clr-CTA-text;
+          outline: none;
         }
-     }
-     
+      }
+    }
+  }
 }
 
+//  ========== feature styling
+.feature{
+  margin-top: rem(100);
+  min-height: rem(1000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:rem(100);
 
+  @include breakpoint-up(xlarge) {
+    padding: 0 rem(90);
+    background-image: url(../../images/illustration-editor-desktop.svg);
+    background-size: rem(800) rem(800);
+    background-repeat: no-repeat;
+    background-position: rem(2000) center;
+    z-index: 100000;
+  }
+  
+  // @include breakpoint-up(large) {
+  //   padding: 0 rem(90);
+  //   background-image: url(../../images/illustration-editor-desktop.svg);
+  //   background-size: rem(800) rem(800);
+  //   background-repeat: no-repeat;
+  //   background-position: rem(790) center;
+  //   z-index: 100000;
+  // }
+  
+  
+
+  &-container{
+    margin-top: rem(0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(50);
+
+    @include breakpoint-up(large) {
+      flex-direction: row-reverse;
+    }
+
+  }
+
+  &__image{
+    @include breakpoint-up(large) {
+      img{
+        display: none;
+      }
+      flex: 1;
+    }
+
+  }
+
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(50);
+
+    @include breakpoint-up(large) {
+      flex: 1.5;
+    }
+
+    &-section{
+      padding: 0 rem(30);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap:  rem(20);
+
+      @include breakpoint-up(large) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      p{
+        color: $clr-body-text;
+        font-size:  rem(16);
+      }
+    }
+  }
+}
