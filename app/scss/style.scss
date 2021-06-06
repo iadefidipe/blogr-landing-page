@@ -165,7 +165,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(50) rem(70);
+  padding: rem(50) rem(100);
 
   @include breakpoint-down(medium) {
     padding: rem(50);
@@ -313,7 +313,7 @@ a {
   }
 }
 
-// ======== hero styling 
+// TODO ======== hero styling 
 .hero {
   min-height: rem(300);
   padding: 0 rem(20);
@@ -369,9 +369,9 @@ a {
   }
 }
 
-//  ========== feature styling
+//  TODO ========== feature styling
 .feature{
-  margin-top: rem(100);
+  margin-top: rem(50);
   min-height: rem(1000);
   display: flex;
   flex-direction: column;
@@ -379,27 +379,81 @@ a {
   align-items: center;
   gap:rem(100);
 
-  @include breakpoint-up(xlarge) {
+  @include breakpoint-down(large-4k) {
+    margin: rem(100) auto 0 auto;
     padding: 0 rem(90);
     background-image: url(../../images/illustration-editor-desktop.svg);
-    background-size: rem(800) rem(800);
+    background-size: rem(2000) rem(800);
     background-repeat: no-repeat;
-    background-position: rem(2000) center;
+    background-position: rem(2500) center;
     z-index: 100000;
   }
+
+  @include breakpoint-down(large-2k) {
+    background-size: rem(1800) rem(800);
   
-  // @include breakpoint-up(large) {
-  //   padding: 0 rem(90);
-  //   background-image: url(../../images/illustration-editor-desktop.svg);
-  //   background-size: rem(800) rem(800);
-  //   background-repeat: no-repeat;
-  //   background-position: rem(790) center;
-  //   z-index: 100000;
-  // }
+    background-position: rem(1700) center;
+  }
+
+  @include breakpoint-down(large) {
+    background-size: rem(1000) rem(800);
+    
+    background-position: rem(1200) center;
+  
+  }
+
+  @include breakpoint-down(desktop) {
+    
+    background-position: rem(800) center;
+    
+  }
+
+  @include breakpoint-down(medium) {
+    background-image: none;
+    padding: 0 rem(20);
+  }
+
+  &:last-of-type{
+
+    @include breakpoint-down(large-4k) {
+      margin: rem(100) auto 0 auto;
+      padding: 0 rem(90);
+      background-image: url(../../images/illustration-laptop-desktop.svg);
+      background-size: rem(2000) rem(800);
+      background-repeat: no-repeat;
+      background-position: left center;
+      z-index: 100000;
+    }
+
+    @include breakpoint-down(large-2k) {
+      background-size: rem(1800) rem(800);
+  
+      background-position: left center;
+    }
+
+    @include breakpoint-down(large) {
+      background-size: rem(1000) rem(800);
+      background-position: left center;
+    }
+
+    @include breakpoint-down(desktop) {
+      background-position: rem(-280) center;
+    }
+
+  
+
+    @include breakpoint-down(medium) {
+      background-image: none;
+      padding: 0 rem(20);
+    }
+
+  }
+  
+  
   
   
 
-  &-container{
+  &__container{
     margin-top: rem(0);
     display: flex;
     flex-direction: column;
@@ -410,8 +464,23 @@ a {
     @include breakpoint-up(large) {
       flex-direction: row-reverse;
     }
+    
+
+    &-2{
+      @include breakpoint-up(large) {
+        flex-direction: row;
+      }
+    }
 
   }
+
+  h2{
+    text-align: center;
+  }
+
+  
+
+
 
   &__image{
     @include breakpoint-up(large) {
@@ -419,6 +488,12 @@ a {
         display: none;
       }
       flex: 1;
+
+      
+    }
+
+    &:last-of-type{
+        flex: 3;
     }
 
   }
@@ -431,7 +506,7 @@ a {
     gap: rem(50);
 
     @include breakpoint-up(large) {
-      flex: 1.5;
+      flex: 1;
     }
 
     &-section{
@@ -453,5 +528,81 @@ a {
         font-size:  rem(16);
       }
     }
+
+    &:last-of-type{
+      text-align: center;
+      p{
+        color: $clr-body-text;
+      }
+
+      @include breakpoint-up(large) {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
   }
 }
+
+// TODO ======== Illustration styling
+.illustration{
+  margin-top:  rem(200);
+  position: relative;
+  min-height: rem(100);
+  background:url(../../images/bg-pattern-circles.svg), $gradient-body;
+  background-size: rem(580) rem(700), 100%;
+  background-repeat: no-repeat;
+  background-position: center rem(-300), center;
+  border-radius: 0 rem(120) 0 rem(120);
+
+  padding: rem(100) rem(20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint-up(large){
+    max-height: rem(400);
+    background-size: rem(1050) rem(850), 100%;
+    background-position: rem(-230) rem(-360), center;
+    padding: 0 rem(50);
+    flex-direction: row;
+  }
+  
+
+
+  &__image{
+    position: absolute;
+    top: rem(-160);
+
+    @include breakpoint-up(large){
+      position: relative;
+      top: rem(20);
+      flex: 1;
+    }
+  }
+
+  &__text{
+    margin-top: rem(150);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:rem(30);
+    @include breakpoint-up(mobile){
+      margin-top: rem(300);
+    }
+
+    @include breakpoint-up(large){
+      margin-top: 0;
+      text-align: left;
+      flex: 1;
+    }
+    
+    h2{
+      color: $clr-text;
+    }
+  }
+
+}
+
+
+

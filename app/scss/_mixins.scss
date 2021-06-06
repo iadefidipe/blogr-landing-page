@@ -46,10 +46,10 @@
 
 
 //640px, 1024px, 1400px
-$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "1900px");
+$breakpoints-up: ("mobile":"470px","medium": "40em", "large": "64em", "xlarge": "1900px");
 
 //639px, 1023px, 1399px
-$breakpoints-down: ( "small":"39.9375em", "medium": "63.9375em", "tablet":"850px", "tablet-mini":"700px", "mobile":"450px", "mobile-mini":"350px", "large": "87.4375em");
+$breakpoints-down: ( "small":"39.9375em", "medium": "63.9375em", "tablet":"850px", "tablet-mini":"700px", "mobile":"450px", "mobile-mini":"350px", "desktop": "1440px", "large": "2000px", "large-2k": "3000px","large-4k": "3840px");
 
 @mixin breakpoint-up($size) {
     
