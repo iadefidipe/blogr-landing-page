@@ -1,0 +1,138 @@
+// ========== CSS RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  margin: rem(0);
+  padding: rem(0);
+  margin-left: -40px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+// ========== BASE
+body {
+  text-rendering: optimizeSpeed;
+  background: white;
+  max-width: 100%;
+  font-family: $font-primary;
+}
+
+// ========== TYPOGRAPHY
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: rem(56);
+  line-height: rem(40);
+  font-weight: $weight-bold;
+  font-family: $font-primary;
+  color: $clr-text;
+
+  @include breakpoint-down(medium) {
+    font-size: rem(46);
+  }
+
+  @include breakpoint-down(small) {
+    font-size: rem(28);
+  }
+
+}
+h2 {
+  font-size: rem(30);
+  line-height: rem(40);
+  font-weight: $weight-medium;
+  font-family: $font-secondary;
+  color: $clr-headings; 
+
+}
+h3 {
+  font-size: rem(26);
+  line-height: rem(36);
+  font-weight: $weight-medium;
+  font-family: $font-secondary;
+  color: $clr-headings;
+}
+
+h4{
+  font-size:  rem(16);
+  font-weight: $weight-bold;
+}
+p,
+a {
+  font-size: rem(16);
+  line-height: rem(29);
+  color: $clr-text;
+  font-weight: $weight-light;
+  font-family: $font-primary;
+}
+
+//visibility
+.hide-for-mobile {
+  //hide elements in mobile view
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide elements in desktopview
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// TODO: Main container styling
+.page-container {
+  background-image: url(../../images/bg-pattern-intro.svg), $gradient-sections;
+  background-size: rem(3000) rem(2500), 100%;
+  background-repeat: no-repeat;
+  background-position: rem(-380) rem(-1050), top;
+  min-height: rem(550);
+  max-width: 100%;
+  border-radius: rem(0) rem(0) rem(0) rem(100);
+
+  @include breakpoint-down(medium) {
+    background-size: rem(2000) rem(1500), 100%;
+    background-position: rem(-500) rem(-400), top;
+  }
+  @include breakpoint-down(medium) {
+    background-size: rem(1800) rem(1500), 100%;
+    background-position: rem(-500) rem(-400), top;
+  }
+}

@@ -92,6 +92,11 @@ h3 {
   color: #1f3f5b;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 p,
 a {
   font-size: 1rem;
@@ -420,7 +425,7 @@ a {
 
 .feature {
   margin-top: 3.125rem;
-  min-height: 62.5rem;
+  min-height: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,7 +444,7 @@ a {
 
 @media (max-width: 3840px) {
   .feature {
-    margin: 6.25rem auto 0 auto;
+    margin: 1.875rem auto 0 auto;
     padding: 0 5.625rem;
     background-image: url(../../images/illustration-editor-desktop.svg);
     background-size: 125rem 50rem;
@@ -459,7 +464,7 @@ a {
 @media (max-width: 2000px) {
   .feature {
     background-size: 62.5rem 50rem;
-    background-position: 75rem center;
+    background-position: 62.5rem center;
   }
 }
 
@@ -477,7 +482,7 @@ a {
 }
 
 @media (max-width: 3840px) {
-  .feature:last-of-type {
+  .feature-2 {
     margin: 6.25rem auto 0 auto;
     padding: 0 5.625rem;
     background-image: url(../../images/illustration-laptop-desktop.svg);
@@ -489,27 +494,33 @@ a {
 }
 
 @media (max-width: 3000px) {
-  .feature:last-of-type {
+  .feature-2 {
     background-size: 112.5rem 50rem;
-    background-position: left center;
+    background-position: -37.5rem center;
   }
 }
 
 @media (max-width: 2000px) {
-  .feature:last-of-type {
+  .feature-2 {
     background-size: 62.5rem 50rem;
-    background-position: left center;
+    background-position: -12.5rem center;
   }
 }
 
 @media (max-width: 1440px) {
-  .feature:last-of-type {
+  .feature-2 {
     background-position: -17.5rem center;
   }
 }
 
+@media (max-width: 1250px) {
+  .feature-2 {
+    background-position: -25rem center;
+  }
+}
+
 @media (max-width: 63.9375em) {
-  .feature:last-of-type {
+  .feature-2 {
     background-image: none;
     padding: 0 1.25rem;
   }
@@ -732,5 +743,108 @@ a {
 
 .illustration__text h2 {
   color: white;
+}
+
+.footer {
+  background: #25252d;
+  border-radius: 0 6.25rem 0 0;
+  padding: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3.125rem;
+}
+
+@media (min-width: 64em) {
+  .footer {
+    margin-top: 3.125rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 4.375rem 9.375rem;
+  }
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3.125rem;
+}
+
+@media (min-width: 64em) {
+  .footer__links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.footer__links-section {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.footer__links-section a:hover {
+  text-decoration: underline;
+}
+
+.footer__links-section-sub {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links-section-sub a {
+  color: #c8c8cb;
+}
+
+.footer__links-section-sub a:hover {
+  text-decoration: underline !important;
 }
 /*# sourceMappingURL=style.css.map */
