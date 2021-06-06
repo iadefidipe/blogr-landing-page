@@ -1,5 +1,6 @@
 // TODO === Footer styling 
 .footer{
+    margin-top: rem(50);
   background:$clr-footer-bg;
   border-radius: 0 rem(100) 0 0;
   padding: rem(70);
@@ -9,7 +10,7 @@
   gap: rem(50);
 
   @include breakpoint-up(large){
-    margin-top: rem(50);
+    
     flex-direction: row;
     align-items: flex-start;
     padding: rem(70) rem(150);

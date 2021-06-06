@@ -746,6 +746,7 @@ a {
 }
 
 .footer {
+  margin-top: 3.125rem;
   background: #25252d;
   border-radius: 0 6.25rem 0 0;
   padding: 4.375rem;
@@ -764,7 +765,6 @@ a {
 
 @media (min-width: 64em) {
   .footer {
-    margin-top: 3.125rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
