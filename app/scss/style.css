@@ -168,6 +168,33 @@ a {
   }
 }
 
+.header.open .icon-rotate {
+  -webkit-animation: spin 0.1s linear both;
+          animation: spin 0.1s linear both;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
 .header.open .header__menu > span:first-of-type {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -190,39 +217,22 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: 1.875rem;
   position: absolute;
-  width: 25rem;
-  height: 31.25rem;
+  width: 90%;
+  height: auto;
+  padding: 3.125rem;
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 2px 20px #8888;
+          box-shadow: 0 2px 20px #8888;
   background-color: white;
-  top: 6.25rem;
+  top: 8.125rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
 .header.open .header__buttons .header__links {
-  justify-self: flex-start;
-  display: block;
-  background-color: blue;
-}
-
-.header.open .header__buttons .header__links a {
-  color: #1f3f5b;
-}
-
-.header.open .header__buttons .header__links a svg {
-  color: red;
-  fill: red;
-}
-
-.header.open .header__buttons .header__cta {
-  background-color: #00ff48;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,6 +240,98 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+}
+
+.header.open .header__buttons .header__links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header.open .header__buttons .header__links-link {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: green;
+}
+
+.header.open .header__buttons .header__links-sub {
+  background: #edeaea;
+  width: 100%;
+  padding: 0.625rem 0;
+  border-radius: 0.625rem;
+  margin-top: 1.25rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.header.open .header__buttons .header__links-sub a {
+  text-align: center;
+}
+
+.header.open .header__buttons .header__links-sub--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header.open .header__buttons .header__links a {
+  color: #1f3f5b;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header.open .header__buttons .header__cta {
+  border-top: 1px solid #c7c5c5;
+  width: 100%;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header.open .header__buttons .header__cta a {
+  font-size: 1.25rem;
+}
+
+.header.open .header__buttons .header__cta a:first-of-type {
+  color: #1f3f5b;
+}
+
+.header.open .header__buttons .header__cta a:last-of-type {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffa38a), to(#ff1430));
+  background: linear-gradient(#ffa38a, #ff1430);
+  color: white;
 }
 
 .header__logo {
