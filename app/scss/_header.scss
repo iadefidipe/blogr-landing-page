@@ -13,10 +13,13 @@
     padding: rem(50) rem(20);
   }
 
+
+  // ************************************************************
+
   // TODO: JS class that controls hamburger
   &.open {
 
-    // TODO: icon rotate class
+    // TODO: icon rotate helper class
     .icon-rotate {
 
       animation: spin 0.1s linear both;
@@ -58,6 +61,7 @@
       left: 50%;
       transform: translateX(-50%);
 
+
       .header__links {
         display: flex;
         flex-direction:  column;
@@ -67,22 +71,16 @@
         width: 90%;
 
         &-container{
+          // background: red;
           display: flex;
           flex-direction: column;
           align-items: center;
           width:100%;
         }
-        
-
-        &-link{
-          text-align: center;
-          display: flex;
-          align-items: center;  
-          background-color: green;        
-        }
+      
 
         &-sub{
-          background:rgb(237, 234, 234);
+          background:rgb(237, 234, 234); //
           width: 100%;
           padding:  rem(10) 0;
           border-radius: rem(10);
@@ -107,6 +105,12 @@
           font-size: rem(20);
           font-weight: $weight-bold;
         }
+      }
+
+      .header__link{
+        display: flex;
+        align-items: center;
+        gap:  rem(10);
       }
 
       .header__cta {
@@ -134,6 +138,9 @@
     }
   }
 
+
+  // ************************************************************
+  
 //   TODO: HEader logo styling
   &__logo {
     flex: 1;
@@ -155,11 +162,7 @@
     }
   }
 
-  &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  
 
   &__menu {
     > span {
@@ -175,21 +178,73 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  
+
   &__links {
     display: flex;
+    position: relative;
     gap: rem(25);
 
     @include breakpoint-down(medium) {
       display: none;
     }
 
-    a {
-      display: flex;
+  }
+
+  &-container{
+    position: relative;
+  }
+
+  &__link{
+    @include breakpoint-up(large){
+      display: inline-flex;
       align-items: center;
-      gap: rem(9);
-      font-weight: $weight-semi-bold;
+      justify-content: center;
+      gap: rem(10);
+      font-size: rem(14);
+      font-weight: $weight-bold;
+
+      &:hover{
+        text-decoration: underline;
+      }
+      
+
+      &-sub{
+        background: white;
+        padding: rem(20) 0 rem(20) rem(20);
+        width: rem(150);
+        border-radius:  rem(10);
+        box-shadow: 0 0 4px #888;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: rem(45);
+        transform: translateX(rem(-20));
+
+
+        a{
+          font-size: rem(14);
+          font-weight: $weight-medium;
+          color: black;
+
+          &:hover{
+            font-weight:$weight-bold;
+          }
+
+        }
+        
+      }
+
     }
   }
+
+  // ************************************************************
 
   &__cta {
     display: flex;
@@ -218,6 +273,9 @@
       }
     }
   }
+
+  
+
 }
 
 
