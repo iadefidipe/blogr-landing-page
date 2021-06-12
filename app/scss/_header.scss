@@ -13,13 +13,7 @@
     padding: rem(50) rem(20);
   }
 
-
-  // ************************************************************
-
-  // TODO: JS class that controls hamburger
-  &.open {
-
-    // TODO: icon rotate helper class
+  // TODO: icon rotate helper class
     .icon-rotate {
 
       animation: spin 0.1s linear both;
@@ -29,6 +23,14 @@
           100% {transform: rotate(180deg);} 
       }
     }
+
+
+  // ************************************************************
+
+  // TODO: JS class that controls hamburger
+  &.open {
+
+    
 
     //todo: hamburger animation
     .header__menu {
@@ -160,6 +162,8 @@
       flex: 1;
       justify-content: flex-end;
     }
+    
+    
   }
 
   
@@ -216,28 +220,37 @@
       
 
       &-sub{
-        background: white;
-        padding: rem(20) 0 rem(20) rem(20);
-        width: rem(150);
-        border-radius:  rem(10);
-        box-shadow: 0 0 4px #888;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: rem(45);
-        transform: translateX(rem(-20));
+
+        @include breakpoint-up(large) {
+          background: white;
+          padding: rem(20) 0 rem(20) rem(20);
+          width: rem(150);
+          border-radius:  rem(10);
+          box-shadow: 0 0 4px #888;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: rem(45);
+          transform: translateX(rem(-20));
 
 
-        a{
-          font-size: rem(14);
-          font-weight: $weight-medium;
-          color: black;
+          a{
+            font-size: rem(14);
+            font-weight: $weight-medium;
+            color: black;
 
-          &:hover{
-            font-weight:$weight-bold;
+            &:hover{
+              font-weight:$weight-bold;
+            }
+
           }
 
-        }
+          &-hide{
+            display: none;
+          }
+      }
+      
+        
         
       }
 
