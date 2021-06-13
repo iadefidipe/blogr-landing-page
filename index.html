@@ -1,232 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
+    <!-- ***=======Ubuntu & Overpass Fonts From Google Fonts ====== -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- ======= Ubuntu & Overpass Fonts From Google Fonts ====== -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    <!-- *** ======== SEO  -->
+    <title>Frontend Mentor | [Blogr]</title>
+    <meta
+      name="description"
+      content="This is a landing page coding challenge from frontendmentor.io."
+    />
 
-  <!-- ==== font awesome cdn -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
-  <!-- === CSS -->
-  <link rel="stylesheet" href="./app/scss/style.css">
-
-
-
-  <!--  ======== SEO  -->
-  <title>Frontend Mentor | [Blogr]</title>
-  <meta name="description" content="This is a landing page coding challenge from frontendmentor.io.">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { background: hsl(240, 10%, 16%); font-size: 11px; text-align: center; color: hsl(228, 45%, 44%); }
-    .attribution a { color: white; }
-  </style>
-</head>
-<body>
-  <div class="page-container">
-    
-    <header class="header ">
-    
-      <div class="header__logo">
-        <img src="./images/logo.svg" alt="Blogr logo">
-      </div>
-
-
-      <nav>
-
-        <div id="btnHamburger" class="header__menu hide-for-desktop">
-          <span></span>
-          <span></span>
-          <span></span>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        background: hsl(240, 10%, 16%);
+        font-size: 11px;
+        text-align: center;
+        color: hsl(228, 45%, 44%);
+      }
+      .attribution a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TODO========== header and hero container start =================-->
+    <div class="page-container">
+      <!-- TODO========== Header Start ===================================-->
+      <header class="header">
+        <!-- TODO========= Logo container =============================== -->
+        <div class="header__logo">
+          <img src="./images/logo.svg" alt="Blogr logo" />
         </div>
 
-        <div class="header__buttons">
+        <!-- TODO: ======= NAv======================================= -->
+        <nav>
+          <!-- TODO ======== Hamburger button ==========================-->
+          <div id="btnHamburger" class="header__menu hide-for-desktop">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
-          <div class="header__links ">
+          <!-- TODO ======= nav link and cta button container ============-->
+          <div class="header__buttons">
+            <!-- TODO ======== nav links container =======================-->
+            <div class="header__links">
+              <!-- TODO ======== nav links individual container ==========-->
+              <div class="header__links-container">
+                <div class="nav__link">
+                  <a href="" class="header__link nav-fade">
+                    Product
+                    <span>
+                      <img src="./images/icon-arrow-light.svg" alt=""
+                    /></span>
+                  </a>
+                </div>
 
-            <div class="header__links-container">
-
-              <div class="nav__link">
-                <a href="" class="header__link nav-fade">
-                  Product
-                  <span> <img src="./images/icon-arrow-light.svg" alt=""></span>
-                </a>
+                <div
+                  class="
+                    header__links-sub header__link-sub header__link-sub-hide
+                  "
+                >
+                  <a href="">Overview</a>
+                  <a href="">Pricing</a>
+                  <a href="">Marketplace</a>
+                  <a href="">Features</a>
+                  <a href="">Integrations</a>
+                </div>
               </div>
 
-              <div class="header__links-sub header__link-sub header__link-sub-hide ">
-                <a href="">Overview</a>
-                <a href="">Pricing</a>
-                <a href="">Marketplace</a>
-                <a href="">Features</a>
-                <a href="">Integrations</a>
+              <!-- TODO ======== nav links individual container ==========-->
+              <div class="header__links-container">
+                <div class="nav__link">
+                  <a href="" class="header__link nav-fade"
+                    >Company
+                    <span>
+                      <img src="./images/icon-arrow-light.svg" alt="" /></span
+                  ></a>
+                </div>
 
+                <div
+                  class="
+                    header__links-sub header__link-sub header__link-sub-hide
+                  "
+                >
+                  <a href="">About</a>
+                  <a href="">Team</a>
+                  <a href="">Blog</a>
+                  <a href="">Career</a>
+                </div>
               </div>
 
+              <!-- TODO ======== nav links individual container ==========-->
+              <div class="header__links-container">
+                <div class="nav__link">
+                  <a href="" class="header__link nav-fade"
+                    >Connect
+                    <span>
+                      <img src="./images/icon-arrow-light.svg" alt="" /></span
+                  ></a>
+                </div>
+
+                <div
+                  class="
+                    header__links-sub header__link-sub header__link-sub-hide
+                  "
+                >
+                  <a href="">Contact</a>
+                  <a href="">Newsletter</a>
+                  <a href="">LinkedIn</a>
+                </div>
+              </div>
             </div>
 
-
-            <div class="header__links-container">
-
-              <div class="nav__link"><a href="" class="header__link nav-fade">Company <span> <img src="./images/icon-arrow-light.svg" alt=""></span></a></div>
-
-              <div class="header__links-sub header__link-sub header__link-sub-hide">
-                <a href="">About</a>
-                <a href="">Team</a>
-                <a href="">Blog</a>
-                <a href="">Career</a>
-              </div>
-
+            <!-- TODO ======== nav cta button  container ==========-->
+            <div class="header__cta">
+              <a class="Login nav-fade" href="#">Login</a>
+              <a class="SignUp nav-fade" href="#">Sign Up</a>
             </div>
-
-            <div class="header__links-container">
-
-              <div class="nav__link"><a href="" class=" header__link nav-fade">Connect <span> <img src="./images/icon-arrow-light.svg" alt=""></span></a></div>
-
-              <div class="header__links-sub header__link-sub header__link-sub-hide">
-                <a href="">Contact</a>
-                <a href="">Newsletter</a>
-                <a href="">LinkedIn</a>
-              </div>
-            </div>
-
           </div>
+        </nav>
+      </header>
+      <!-- TODO========== Header end ===================================-->
 
-          <div class="header__cta ">
-            <a class="Login nav-fade" href="#">Login</a>
-            <a class="SignUp nav-fade" href="#">Sign Up</a>
-          </div>
-
+      <!-- TODO========== Hero start ===================================-->
+      <section class="hero">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div class="hero__cta">
+          <a href="">Start for Free</a>
+          <a href="">Learn More</a>
         </div>
-
-      </nav>
-
-    </header>
-
-    <section class="hero">
-      <h1>A modern publishing platform</h1>
-      <p>Grow your audience and build your online brand</p>
-      <div class="hero__cta">
-        <a href="">Start for Free</a>
-        <a href="">Learn More</a>
-      </div>
-    </section>
-
-  </div>
-
-  
-
-  <main>
-    <section class="section feature">
-      <h2>Designed for the future</h2>
-      <div class="feature__container">
-        <div class="feature__image">
-          <img src="./images/illustration-editor-mobile.svg" alt="">
-        </div>
-        <div class="feature__text">
-          <div class="feature__text-section">
-            <h3>Introducing an extensible editor</h3>
-            <p>
-              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-              change the looks of a blog.
-            </p>
-          </div>
-          <div class="feature__text-section">
-            <h3>Robust content management</h3>
-            <p>
-              Flexible content management enables users to easily move through posts. Increase the usability of your blog
-              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section  illustration">
-      <div class="illustration__image">
-        <img src="./images/illustration-phones.svg" alt="">
-      </div>
-      <div class="illustration__text">
-        <h2>State of the Art Infrastructure</h2>
-        <p>
-          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-        </p>
-      </div>
-    </section>
-    <section class="feature feature-2">
-      <div class="feature__container  feature__container-2">
-        <div class="feature__image">
-          <img src="./images/illustration-laptop-mobile.svg" alt="">
-        </div>
-        <div class="feature__text">
-          <h3>Free, open, simple</h3>
-          <p>
-            Blogr is a free and open source application backed by a large community of helpful developers. It supports
-            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-          </p>
-          <h3>Powerful tooling</h3>
-          <p>
-            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-            capable of producing even the most complicated sites.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="section  footer">
-
-    <div class="footer__logo"><img src="./images/logo.svg" alt=""></div>
-    <div class="footer__links">
-      <div class="footer__links-section">
-        <a href=""><h4>Product</h4></a>
-        <div class="footer__links-section-sub">
-          <a href="">Overview</a>
-          <a href="">Pricing</a>
-          <a href="">Marketplace</a>
-          <a href="">Features</a>
-          <a href="">Integrations</a>
-        </div>
-      </div>
-      <div class="footer__links-section">
-
-        <a href=""><h4>Company</h4></a>
-
-        <div class="footer__links-section-sub">
-          <a href="">About</a>
-          <a href="">Team</a>
-          <a href="">Blog</a>
-        </div>
-
-      </div>
-      <div class="footer__links-section">
-        <a href=""><h4>Connect</h4></a>
-        <div class="footer__links-section-sub">
-          <a href="">Contact</a>
-          <a href="">Newsletter</a>
-          <a href="">LinkedIn</a>
-        </div>
-      </div>
+      </section>
+      <!-- TODO========== Hero end ===================================-->
     </div>
-    
-  </footer>
+    <!-- TODO========== header and hero container end =================-->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Israel Adefidipe</a>.
-  </div>
-</body>
+    <!-- TODO========== page main body container start =================-->
+    <main>
+      <!-- TODO========== feature section =================-->
+      <section class="section feature">
+        <h2>Designed for the future</h2>
 
-<script src="./app/js/script.js"></script>
+        <div class="feature__container">
+          <div class="feature__image">
+            <img src="./images/illustration-editor-mobile.svg" alt="" />
+          </div>
+          <div class="feature__text">
+            <div class="feature__text-section">
+              <h3>Introducing an extensible editor</h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="feature__text-section">
+              <h3>Robust content management</h3>
+              <p>
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you’re in full control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TODO========== feature section  end=================-->
+
+      <!-- TODO========== illustration section =================-->
+      <section class="section illustration">
+        <div class="illustration__image">
+          <img src="./images/illustration-phones.svg" alt="" />
+        </div>
+        <div class="illustration__text">
+          <h2>State of the Art Infrastructure</h2>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </div>
+      </section>
+      <!-- TODO========== illustration section end =================-->
+
+      <!-- TODO========== feauture-2  section =================-->
+      <section class="feature feature-2">
+        <div class="feature__container feature__container-2">
+          <div class="feature__image">
+            <img src="./images/illustration-laptop-mobile.svg" alt="" />
+          </div>
+          <div class="feature__text">
+            <h3>Free, open, simple</h3>
+            <p>
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+            <h3>Powerful tooling</h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- TODO========== feauture-2  section end =================-->
+    </main>
+    <!-- TODO========== page main body container start =================-->
+
+    <!-- TODO========== footer start =================-->
+    <footer class="section footer">
+      <div class="footer__logo"><img src="./images/logo.svg" alt="" /></div>
+      <div class="footer__links">
+        <div class="footer__links-section">
+          <a href=""><h4>Product</h4></a>
+          <div class="footer__links-section-sub">
+            <a href="">Overview</a>
+            <a href="">Pricing</a>
+            <a href="">Marketplace</a>
+            <a href="">Features</a>
+            <a href="">Integrations</a>
+          </div>
+        </div>
+        <div class="footer__links-section">
+          <a href=""><h4>Company</h4></a>
+
+          <div class="footer__links-section-sub">
+            <a href="">About</a>
+            <a href="">Team</a>
+            <a href="">Blog</a>
+          </div>
+        </div>
+        <div class="footer__links-section">
+          <a href=""><h4>Connect</h4></a>
+          <div class="footer__links-section-sub">
+            <a href="">Contact</a>
+            <a href="">Newsletter</a>
+            <a href="">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- TODO========== footer end =================-->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Israel Adefidipe</a>.
+    </div>
+  </body>
+
+  <script src="./app/js/script.js"></script>
 </html>

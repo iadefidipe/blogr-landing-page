@@ -17,6 +17,7 @@ const navLink = document.querySelectorAll(".nav__link");
 
 
 
+// TODO Desktop hamburger functionality
 
     btnHamburger.addEventListener("click", function (e) {
       e.preventDefault();
@@ -49,6 +50,9 @@ const navLink = document.querySelectorAll(".nav__link");
     }
   });
 
+  // ***********************************************************************
+
+  // TODO: reset some defaults when screen size resizes to 1024px
   window.addEventListener('resize', function(e){
 
     if (tabletMin.matches) {
@@ -64,7 +68,7 @@ const navLink = document.querySelectorAll(".nav__link");
 
 
 
-//  ***************************************************************************
+//  ***********************************************************************
 
 
 // TODO: Implementing menu fade animation
@@ -94,7 +98,8 @@ header.addEventListener('mouseout', function(e){
   navHover(e, 1);
 })
 
-// ************************************************************************
+// **********************************************************************
+// TODO nav link function for desktop
 
 navLink.forEach( el => {
 
@@ -103,27 +108,18 @@ navLink.forEach( el => {
 
   el.addEventListener("click", function (e) {
     e.preventDefault();
-    
 
     if (!tabletMin.matches) return;
 
     el.querySelector("img").classList.toggle("icon-rotate");
 
-    sibling.classList.toggle("header__link-sub-hide");
-  
-
-    
+    sibling.classList.toggle("header__link-sub-hide");  
   });
-
-  
-  
-
-  
 
 })
 
 
-// ********************************************************************************************
+// ***********************************************************************
 
 // TODO: Revealing elements on scroll
 const allSections = document.querySelectorAll('.section');
