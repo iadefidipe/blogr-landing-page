@@ -30,7 +30,7 @@ li {
   margin-left: -40px;
 }
 
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -263,6 +263,7 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 90%;
+  z-index: 10000;
 }
 
 .header.open .header__buttons .header__links-container {

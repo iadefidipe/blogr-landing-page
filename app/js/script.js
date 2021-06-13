@@ -4,6 +4,7 @@
 
 const btnHamburger = document.getElementById('btnHamburger')
 const header = document.querySelector('.header')
+const headerButton = document.querySelector('.header__buttons')
 const headerLink = document.querySelectorAll ('.header__link')
 const headerLinks = document.querySelector(".header__links");
 const headerLinkSub = document.querySelectorAll(".header__link-sub");
@@ -13,8 +14,6 @@ const tabletMin = window.matchMedia("(min-width: 1024px)");
 const nav = document.querySelector("nav");
 const logo = document.querySelector(".header__logo");
 const navLink = document.querySelectorAll(".nav__link");
-
-// const headerLinkImg = headerLink.querySelector('img')
 
 
 
@@ -31,6 +30,10 @@ const navLink = document.querySelectorAll(".nav__link");
         headerLink.forEach((element) => {
           element.querySelector("img").src = "./images/icon-arrow-dark.svg";
         }); //* changes the dropdown icon color in the dropdown
+
+        headerButton.style.zIndex = '10000';
+
+
 
         navLink.forEach( link => {
           link.addEventListener("click", function (e) {
@@ -104,8 +107,6 @@ navLink.forEach( el => {
 
     if (!tabletMin.matches) return;
 
-    // console.log(e.target);
-
     el.querySelector("img").classList.toggle("icon-rotate");
 
     sibling.classList.toggle("header__link-sub-hide");
@@ -114,13 +115,7 @@ navLink.forEach( el => {
     
   });
 
-  // el.addEventListener("mouseout", function (e) {
-  //   sibling.classList.add("header__link-sub-hide");
-  // });
-
-  // parent.addEventListener("mouseout", function (e) {
-  //   sibling.classList.add("header__link-sub-hide");
-  // });
+  
   
 
   
@@ -137,7 +132,7 @@ const revealSection = function(entries, observer){
   const [entry] = entries;
 
   if(!entry.isIntersecting) return;
-  // entry.target.classList.remove('section--hidden');
+  
   entry.target.classList.add("section--active");
   observer.unobserve(entry.target)
 }
@@ -146,7 +141,7 @@ const revealSection = function(entries, observer){
 
   allSections.forEach( function(section) {
    sectionObserver.observe(section);
-  //  section.classList.add('section--hidden');
+  
   })
 
 

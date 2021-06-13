@@ -14,24 +14,23 @@
   }
 
   // TODO: icon rotate helper class
-    .icon-rotate {
+  .icon-rotate {
+    animation: spin 0.1s linear both;
 
-      animation: spin 0.1s linear both;
-
-      @keyframes spin {
-          0% {transform: rotate(0deg);}
-          100% {transform: rotate(180deg);} 
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(180deg);
       }
     }
-
+  }
 
   // ************************************************************
 
   // TODO: JS class that controls hamburger
   &.open {
-
-    
-
     //todo: hamburger animation
     .header__menu {
       > span:first-of-type {
@@ -49,58 +48,54 @@
       display: flex;
       flex-direction: column;
       gap: rem(30);
-      // justify-content: center;
-      // align-items: center;
-
       position: absolute;
       width: 90%;
       height: auto;
-      padding:  rem(50);
+      padding: rem(50);
       border-radius: rem(10);
       box-shadow: 0 2px 20px #8888;
       background-color: white;
       top: rem(130);
       left: 50%;
       transform: translateX(-50%);
-
+      
+      
 
       .header__links {
         display: flex;
-        flex-direction:  column;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         // background-color: blue;
         width: 90%;
+        z-index: 10000;
 
-        &-container{
+        &-container {
           // background: red;
           display: flex;
           flex-direction: column;
           align-items: center;
-          width:100%;
-        }
-      
-
-        &-sub{
-          background:rgb(237, 234, 234); //
           width: 100%;
-          padding:  rem(10) 0;
+        }
+
+        &-sub {
+          background: rgb(237, 234, 234); //
+          width: 100%;
+          padding: rem(10) 0;
           border-radius: rem(10);
-          margin-top:  rem(20);
+          margin-top: rem(20);
           display: none;
           flex-direction: column;
           align-items: center;
           gap: rem(20);
-          a{
+          a {
             text-align: center;
           }
 
-          &--active{
+          &--active {
             display: flex;
           }
-            
         }
-
 
         a {
           color: $clr-headings;
@@ -109,10 +104,10 @@
         }
       }
 
-      .header__link{
+      .header__link {
         display: flex;
         align-items: center;
-        gap:  rem(10);
+        gap: rem(10);
       }
 
       .header__cta {
@@ -123,27 +118,25 @@
         display: flex;
         flex-direction: column;
 
-        a{
+        a {
           font-size: rem(20);
 
-          &:first-of-type{
+          &:first-of-type {
             color: $clr-headings;
           }
 
-          &:last-of-type{
+          &:last-of-type {
             background: $gradient-sections;
             color: $clr-text;
-            
           }
         }
       }
     }
   }
 
-
   // ************************************************************
-  
-//   TODO: HEader logo styling
+
+  //   TODO: HEader logo styling
   &__logo {
     flex: 1;
 
@@ -162,11 +155,7 @@
       flex: 1;
       justify-content: flex-end;
     }
-    
-    
   }
-
-  
 
   &__menu {
     > span {
@@ -186,9 +175,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
-
-  
 
   &__links {
     display: flex;
@@ -198,15 +186,14 @@
     @include breakpoint-down(medium) {
       display: none;
     }
-
   }
 
-  &-container{
+  &-container {
     position: relative;
   }
 
-  &__link{
-    @include breakpoint-up(large){
+  &__link {
+    @include breakpoint-up(large) {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -214,18 +201,16 @@
       font-size: rem(14);
       font-weight: $weight-bold;
 
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
-      
 
-      &-sub{
-
+      &-sub {
         @include breakpoint-up(large) {
           background: white;
           padding: rem(20) 0 rem(20) rem(20);
           width: rem(150);
-          border-radius:  rem(10);
+          border-radius: rem(10);
           box-shadow: 0 0 4px #888;
           display: flex;
           flex-direction: column;
@@ -233,25 +218,21 @@
           top: rem(45);
           transform: translateX(rem(-20));
 
-
-          a{
+          a {
             font-size: rem(14);
             font-weight: $weight-medium;
             color: black;
 
-            &:hover{
-              font-weight:$weight-bold;
+            &:hover {
+              font-weight: $weight-bold;
             }
-
           }
 
-          &-hide{
+          &-hide {
             display: none;
           }
+        }
       }
-        
-      }
-
     }
   }
 
@@ -279,14 +260,8 @@
         &:hover {
           background: $clr-CTA-hover-background;
           color: $clr-text;
-          
         }
       }
     }
   }
-
-  
-
 }
-
-
