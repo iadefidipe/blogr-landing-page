@@ -133,7 +133,7 @@ const revealSection = function(entries, observer){
   observer.unobserve(entry.target)
 }
 
- const sectionObserver = new IntersectionObserver(revealSection, {root:null, threshold: 0.2});
+ const sectionObserver = new IntersectionObserver(revealSection, {root:null, threshold: 0.15});
 
   allSections.forEach( function(section) {
    sectionObserver.observe(section);

@@ -153,10 +153,10 @@ a {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.85s ease-in;
+  transition: -webkit-transform 0.85s ease-in;
+  transition: transform 0.85s ease-in;
+  transition: transform 0.85s ease-in, -webkit-transform 0.85s ease-in;
 }
 
 .header {
