@@ -143,10 +143,20 @@ a {
   }
 }
 
-.section--hidden {
+.section {
   opacity: 0;
   -webkit-transform: translateY(10rem);
           transform: translateY(10rem);
+}
+
+.section--active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 .header {
@@ -568,7 +578,7 @@ a {
 }
 
 .hero__cta a:last-of-type {
-  outline: 1px solid white;
+  border: 1px solid white;
 }
 
 .hero__cta a:last-of-type:hover {

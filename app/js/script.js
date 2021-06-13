@@ -17,6 +17,8 @@ const navLink = document.querySelectorAll(".nav__link");
 // const headerLinkImg = headerLink.querySelector('img')
 
 
+
+
     btnHamburger.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -43,6 +45,21 @@ const navLink = document.querySelectorAll(".nav__link");
       });
     }
   });
+
+  window.addEventListener('resize', function(e){
+
+    if (tabletMin.matches) {
+      headerLink.forEach((element) => {
+        element.querySelector("img").src = "./images/icon-arrow-light.svg";
+      });
+      if (header.classList.contains("open")) {
+        header.classList.remove("open");
+      }
+    }
+
+  })
+
+
 
 //  ***************************************************************************
 
@@ -120,7 +137,8 @@ const revealSection = function(entries, observer){
   const [entry] = entries;
 
   if(!entry.isIntersecting) return;
-  entry.target.classList.remove('section--hidden');
+  // entry.target.classList.remove('section--hidden');
+  entry.target.classList.add("section--active");
   observer.unobserve(entry.target)
 }
 
@@ -128,7 +146,7 @@ const revealSection = function(entries, observer){
 
   allSections.forEach( function(section) {
    sectionObserver.observe(section);
-   section.classList.add('section--hidden');
+  //  section.classList.add('section--hidden');
   })
 
 
