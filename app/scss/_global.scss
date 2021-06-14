@@ -141,14 +141,14 @@ a {
 // TODO: Section general classes
 
 .section {
-  opacity: 0;
-  transform: translateY(10rem);
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
 }
 
-.section--active{
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 0.85s ease-in;
+.section--hidden{
+  opacity: 0;
+  transform: translateY(10);
+  // transition: transform 0.85s ease-in;
 }
 
 

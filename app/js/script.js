@@ -129,7 +129,7 @@ const revealSection = function(entries, observer){
 
   if(!entry.isIntersecting) return;
   
-  entry.target.classList.add("section--active");
+  entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target)
 }
 
@@ -137,6 +137,8 @@ const revealSection = function(entries, observer){
 
   allSections.forEach( function(section) {
    sectionObserver.observe(section);
+
+   section.classList.add('section--hidden')
   
   })
 
