@@ -437,9 +437,6 @@ a {
     font-size: 0.875rem;
     font-weight: 700;
   }
-  .header__link:hover {
-    text-decoration: underline;
-  }
 }
 
 @media (min-width: 64em) and (min-width: 64em) {
@@ -453,6 +450,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    opacity: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -472,6 +470,12 @@ a {
   }
   .header__link-sub-hide {
     display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .header__link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -506,6 +510,15 @@ a {
 .header__cta a:last-of-type:hover {
   background: #ff7a85;
   color: white;
+}
+
+.nav__link:hover ~ .header__link-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .hero {

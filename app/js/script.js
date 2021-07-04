@@ -34,15 +34,27 @@ const navLink = document.querySelectorAll(".nav__link");
 
         headerButton.style.zIndex = '10000';
 
-
-
         navLink.forEach( link => {
           link.addEventListener("click", function (e) {
             e.preventDefault();
+            
+            
 
             link.querySelector("img").classList.toggle("icon-rotate");
 
-            link.nextElementSibling.classList.toggle('header__links-sub--active');
+            if (!link.nextElementSibling.classList.contains("header__links-sub--active")){
+              headerLinkSub.forEach((el) =>
+                el.classList.remove("header__links-sub--active")
+              );
+              link.nextElementSibling.classList.toggle(
+                "header__links-sub--active"
+              );
+            }else{
+              link.nextElementSibling.classList.remove(
+                "header__links-sub--active"
+              );
+            }
+              
         });
         
         
@@ -111,12 +123,31 @@ navLink.forEach( el => {
 
     if (!tabletMin.matches) return;
 
-    el.querySelector("img").classList.toggle("icon-rotate");
-
+    // el.querySelector("img").classList.toggle("icon-rotate");
     sibling.classList.toggle("header__link-sub-hide");  
+    sibling.style.opacity = '1';
+
+    
   });
 
+  // sibling.addEventListener("mouseout", function (e) {
+  //   sibling.style.opacity = "0";
+  // });
+
+
+
 })
+
+// headerLinkSub.forEach(el => {
+
+//   // el.addEventListener('mouseover', () => {
+//   //   el.style.opacity='1';
+//   // } )
+
+//   el.addEventListener('mouseout', () => {
+//     el.style.opacity='0';
+//   } )
+// })
 
 
 // ***********************************************************************

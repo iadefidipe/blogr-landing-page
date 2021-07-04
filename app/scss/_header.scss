@@ -201,18 +201,18 @@
       font-size: rem(14);
       font-weight: $weight-bold;
 
-      &:hover {
-        text-decoration: underline;
-      }
+      
 
       &-sub {
         @include breakpoint-up(large) {
+
           background: white;
           padding: rem(20) 0 rem(20) rem(20);
           width: rem(150);
           border-radius: rem(10);
           box-shadow: 0 0 4px #888;
           display: flex;
+          opacity: 0;
           flex-direction: column;
           position: absolute;
           top: rem(45);
@@ -233,6 +233,12 @@
           }
         }
       }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+     
     }
   }
 
@@ -264,4 +270,10 @@
       }
     }
   }
+}
+
+.nav__link:hover ~ .header__link-sub {
+  display:flex;
+  opacity: 1;
+  transition: 500ms ease-in-out;
 }
